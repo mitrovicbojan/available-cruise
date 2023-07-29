@@ -41,8 +41,9 @@ function myFunction() {
   let avaCabin = 0;
 
   for (let i of myCruises) {
-    if (i[destination].hasOwnProperty(category)) {
-      console.log("nesto");
+    if (i.hasOwnProperty(destination)) {
+      let selectedDestination = i[destination];
+      console.log(selectedDestination[category]);
     }
   }
 }

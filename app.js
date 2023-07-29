@@ -39,11 +39,10 @@ function myFunction() {
   let output = document.getElementById("output");
   let outPrice = 0;
   let avaCabin = 0;
-  let selectedDestination = "";
+
   for (let i of myCruises) {
-    if ((i[destination] = destination)) {
-      selectedDestination = destination;
+    if (i[destination].hasOwnProperty(category)) {
+      console.log("nesto");
     }
   }
-  console.log(selectedDestination);
 }

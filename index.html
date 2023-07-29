@@ -5,5 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Availability</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <form>
+        <h2>Choose Destination</h2>
+        <select id="destination">
+          <option value="tahiti">Tahiti</option>
+          <option value="seychelles">Seychelles</option>
+        </select>
+        <h2>Choose cabin category</h2>
+        <select id="category">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+
+        <div id="output">
+          <p id="output-cabins">Number of Cabins Available: <span>5</span></p>
+          <p id="output-price">Price per person: <span>2000</span></p>
+        </div>
+
+        <button type="button" onclick="myFunction()">Check</button>
+      </form>
+    </main>
+    <script src="app.js"></script>
+  </body>
 </html>

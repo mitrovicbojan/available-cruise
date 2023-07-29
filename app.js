@@ -39,7 +39,11 @@ function myFunction() {
   let output = document.getElementById("output");
   let outPrice = 0;
   let avaCabin = 0;
+  let selectedDestination = "";
   for (let i of myCruises) {
-    console.log(i);
+    if ((i[destination] = destination)) {
+      selectedDestination = destination;
+    }
   }
+  console.log(selectedDestination);
 }

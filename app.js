@@ -36,7 +36,8 @@ let myCruises = [
 function myFunction() {
   let destination = document.getElementById("destination").value;
   let category = document.getElementById("category").value;
-  let output = document.getElementById("output");
+  let outputCabinNum = document.getElementById("output-cabin-num");
+  let outputCabinPrice = document.getElementById("output-cabin-price");
   let outPrice = 0;
   let avaCabin = 0;
 
@@ -44,6 +45,19 @@ function myFunction() {
     if (i.hasOwnProperty(destination)) {
       let selectedDestination = i[destination];
       console.log(selectedDestination[category]);
+      outPrice += selectedDestination[category].price;
+      avaCabin += selectedDestination[category].number;
     }
   }
+  if (avaCabin > 0) {
+    outputCabinNum.innerText = avaCabin;
+    outputCabinPrice.innerText = outPrice;
+  } else {
+    outputCabinNum.innerText = `Not available`;
+    outputCabinPrice.innerText = `N/A`;
+    outputCabinNum.style.color = "red";
+  }
+
+  console.log(outPrice);
+  console.log(avaCabin);
 }

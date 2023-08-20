@@ -57,6 +57,20 @@ for (let cruise of cruisesArr) {
     }
   }
 }
+
+section.addEventListener("change", function () {
+  for (let cruise of cruisesArr) {
+    if (section.value == cruise.destination) {
+      for (let cat of cruise.ship.cabins) {
+        let cabinCatOpt = document.createElement("option");
+        category.remove(cabinCatOpt);
+        category.appendChild(cabinCatOpt);
+        cabinCatOpt.append(cat.category);
+      }
+    }
+  }
+});
+
 // function removeNum(cat) {
 //   for (let num in tahitiCabins) {
 //     if (cat == tahitiCabins[num].category) {

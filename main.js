@@ -35,6 +35,28 @@ let seychellesCabins = [
 ];
 let seychelles = new Cruise("seychelles", new Ship("Danzig", seychellesCabins));
 
+let cruisesArr = [tahiti, seychelles];
+
+let section = document.getElementById("destination");
+let category = document.getElementById("category");
+
+for (let cruise of cruisesArr) {
+  let options = document.createElement("option");
+  options.style.textTransform = "Capitalize";
+  section.style.textTransform = "Capitalize";
+  section.appendChild(options);
+  options.append(cruise.destination);
+}
+
+for (let cruise of cruisesArr) {
+  if (cruise.destination == section.value) {
+    for (let cat of cruise.ship.cabins) {
+      let cabinCatOpt = document.createElement("option");
+      category.appendChild(cabinCatOpt);
+      cabinCatOpt.append(cat.category);
+    }
+  }
+}
 // function removeNum(cat) {
 //   for (let num in tahitiCabins) {
 //     if (cat == tahitiCabins[num].category) {

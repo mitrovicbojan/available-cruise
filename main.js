@@ -39,16 +39,14 @@ let cruisesArr = [tahiti, seychelles];
 
 let section = document.getElementById("destination");
 let category = document.getElementById("category");
-
+let bookingBtn = document.getElementById("booking-btn");
+bookingBtn.style.display = "None";
 for (let cruise of cruisesArr) {
   let options = document.createElement("option");
   options.style.textTransform = "Capitalize";
   section.style.textTransform = "Capitalize";
   section.appendChild(options);
   options.append(cruise.destination);
-}
-
-for (let cruise of cruisesArr) {
   if (cruise.destination == section.value) {
     for (let cat of cruise.ship.cabins) {
       let cabinCatOpt = document.createElement("option");
@@ -71,6 +69,24 @@ section.addEventListener("change", function () {
   }
 });
 
+function myFunction() {
+  let newOpt = document.getElementById("destination").value;
+  let selectedCabin = document.getElementById("category").value;
+  let cabinNum = document.getElementById("output-cabin-num");
+  let cabinPrice = document.getElementById("output-cabin-price");
+
+  for (let cruise of cruisesArr) {
+    if (newOpt == cruise.destination) {
+      for (let cat of cruise.ship.cabins) {
+        if (cat.category == selectedCabin) {
+          cabinNum.innerHTML = cat.number;
+          cabinPrice.innerHTML = cat.price;
+          bookingBtn.style.display = "Block";
+        }
+      }
+    }
+  }
+}
 // function removeNum(cat) {
 //   for (let num in tahitiCabins) {
 //     if (cat == tahitiCabins[num].category) {

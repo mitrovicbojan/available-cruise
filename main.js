@@ -15,25 +15,26 @@ class Ship {
 class Cabins {
   constructor(category, number, price) {
     this.category = category;
-    this.number = myNum();
+    this.number = number;
     this.price = price;
   }
 }
 
-function myNum() {
-  return 5;
-}
-
-let myCount = 7 - myNum();
-
-console.log(myCount);
 let tahitiCabins = [
   new Cabins("A", 5, 1000),
   new Cabins("B", 3, 800),
   new Cabins("C", 2, 500),
 ];
 
-console.log(tahitiCabins);
+let tahiti = new Cruise("tahiti", new Ship("Flafica", tahitiCabins));
+
+let seychellesCabins = [
+  new Cabins("P", 2, 3500),
+  new Cabins("A", 1, 2500),
+  new Cabins("B", 4, 1000),
+];
+let seychelles = new Cruise("seychelles", new Ship("Danzig", seychellesCabins));
+
 // function removeNum(cat) {
 //   for (let num in tahitiCabins) {
 //     if (cat == tahitiCabins[num].category) {

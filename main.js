@@ -87,6 +87,12 @@ function myFunction() {
     }
   }
 }
+
+let bkgForm = document.getElementById("booking-form");
+bkgForm.style.display = "None";
+function bookingForm() {
+  bkgForm.style.display = "Block";
+}
 // function removeNum(cat) {
 //   for (let num in tahitiCabins) {
 //     if (cat == tahitiCabins[num].category) {

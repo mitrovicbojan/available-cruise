@@ -4,3 +4,7 @@ form {
   margin: 25px 0;
   border-radius: 10px;
 }
+main {
+  display: flex;
+  flex-wrap: wrap;
+}

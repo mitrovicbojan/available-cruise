@@ -138,20 +138,20 @@
                 id="credit-card"
                 value=""
                 autocomplete="off"
-                type="text"
+                type="number"
               />
             </div>
           </fieldset>
         </form>
       </div>
     </section>
-    <script src="payment.html"></script>
-    <script>
+    <script src="payment.js"></script>
+    <!-- <script>
       $("#credit-card").on("keypress change", function () {
         $(this).val(function (index, value) {
           return value.replace(/\W/gi, "").replace(/(.{4})/g, "$1 ");
         });
       });
-    </script>
+    </script> -->
   </body>
 </html>

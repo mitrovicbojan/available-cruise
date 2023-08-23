@@ -24,6 +24,8 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <title>Availability</title>
   </head>
@@ -181,19 +183,18 @@
         <h3>Category: <span id="booking-category">A</span></h3>
         <h3>Price: <span id="booking-price">1000</span></h3>
         <h6>Primary Traveler</h6>
-        <p>First Name</p>
-        <input class="form-control" placeholder="Enter First Name">
-        <p>Last Name</p>
-        <input class="form-control" placeholder="Enter First Name">
-        <p>Phone</p>
-        <input class="form-control" placeholder="Enter First Name">
-        <h6>Secondary Traveler</h6>
-        <p>First Name</p>
-        <input class="form-control" placeholder="Enter First Name">
-        <p>Last Name</p>
-        <input class="form-control" placeholder="Enter First Name">
-        <p>Phone</p>
-        <input class="form-control" placeholder="Enter First Name">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="First Name">
+          <label for="floatingInput">First Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingPassword" placeholder="Last Name">
+          <label for="floatingPassword">Last Name</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="floatingPassword" placeholder="Last Name">
+          <label for="floatingPassword">Last Name</label>
+        </div>       
         
       </form>
     </main>

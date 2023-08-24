@@ -192,10 +192,30 @@
           <label for="floatingPassword">Last Name</label>
         </div>
         <div class="form-floating">
+          <input type="phone" class="form-control" id="floatingPassword" placeholder="Phone Number">
+          <label for="floatingPassword">Phone Number</label>
+        </div>
+        <h6>Primary Traveler</h6>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="First Name">
+          <label for="floatingInput">First Name</label>
+        </div>
+        <div class="form-floating mb-3">
           <input type="text" class="form-control" id="floatingPassword" placeholder="Last Name">
           <label for="floatingPassword">Last Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="phone" class="form-control" id="floatingPassword" placeholder="Phone Number">
+          <label for="floatingPassword">Phone Number</label>
         </div>       
-        
+        <button
+          class="btn btn-success btn-lg btn-block"
+          type="button"
+          id="booking-btn"   
+          onclick="payment()"       
+        >
+          Payment
+        </button>
       </form>
     </main>
     <!-- <script src="app.js"></script> -->

@@ -5,6 +5,8 @@ function downloadPDF() {
   var city = document.getElementById("city").value;
   var state = document.getElementById("state").value;
   var logo = document.getElementById("logo");
+  let myStr = "Hello World!";
+
   var doc = new jsPDF();
   doc.text(20, 20, "Name: " + name);
   doc.text(20, 30, "Email: " + email);
@@ -12,5 +14,7 @@ function downloadPDF() {
   doc.text(20, 50, "City: " + city);
   doc.text(20, 60, "State: " + state);
   doc.text(20, 80, "Logo: " + logo);
+  doc.text(20, 90, "Message: " + myStr);
+
   doc.save("form.pdf");
 }

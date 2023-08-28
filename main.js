@@ -92,6 +92,10 @@ let bkgForm = document.getElementById("booking-form");
 bkgForm.style.display = "None";
 function bookingForm() {
   bkgForm.style.display = "Block";
+  let newOpt = document.getElementById("destination").innerHTML;
+  let selectedCabin = document.getElementById("category").innerHTML;
+  let cabinPrice = document.getElementById("output-cabin-price").innerHTML;
+  console.log(cabinPrice);
 }
 // function removeNum(cat) {
 //   for (let num in tahitiCabins) {

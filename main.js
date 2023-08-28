@@ -82,20 +82,23 @@ function myFunction() {
           cabinNum.innerHTML = cat.number;
           cabinPrice.innerHTML = cat.price;
           bookingBtn.style.display = "Block";
+          bookingForm(selectedCabin, cabinPrice, newOpt);
         }
       }
     }
   }
 }
-
 let bkgForm = document.getElementById("booking-form");
 bkgForm.style.display = "None";
-function bookingForm() {
+function bookingForm(selectedCabin, cabinPrice, newOpt) {
   bkgForm.style.display = "Block";
-  let newOpt = document.getElementById("destination").innerHTML;
-  let selectedCabin = document.getElementById("category").innerHTML;
-  let cabinPrice = document.getElementById("output-cabin-price").innerHTML;
-  console.log(cabinPrice);
+
+  let bkgDestination = document.getElementById("booking-destination");
+  let bkgCabinCat = document.getElementById("booking-category");
+  let bkgPrice = document.getElementById("booking-price");
+  bkgDestination.innerHTML = newOpt;
+  bkgCabinCat.innerHTML = selectedCabin;
+  bkgPrice.innerHTML = cabinPrice;
 }
 // function removeNum(cat) {
 //   for (let num in tahitiCabins) {

@@ -74,6 +74,9 @@ function myFunction() {
   let selectedCabin = document.getElementById("category").value;
   let cabinNum = document.getElementById("output-cabin-num");
   let cabinPrice = document.getElementById("output-cabin-price");
+  let bkgDestination = document.getElementById("booking-destination");
+  let bkgCabinCat = document.getElementById("booking-category");
+  let bkgPrice = document.getElementById("booking-price");
 
   for (let cruise of cruisesArr) {
     if (newOpt == cruise.destination) {
@@ -82,7 +85,9 @@ function myFunction() {
           cabinNum.innerHTML = cat.number;
           cabinPrice.innerHTML = cat.price;
           bookingBtn.style.display = "Block";
-          bookingForm(selectedCabin, cabinPrice, newOpt);
+          bkgDestination.innerHTML = newOpt;
+          bkgCabinCat.innerHTML = selectedCabin;
+          bkgPrice.innerHTML = cat.price;
         }
       }
     }
@@ -90,15 +95,8 @@ function myFunction() {
 }
 let bkgForm = document.getElementById("booking-form");
 bkgForm.style.display = "None";
-function bookingForm(selectedCabin, cabinPrice, newOpt) {
+function bookingForm() {
   bkgForm.style.display = "Block";
-
-  let bkgDestination = document.getElementById("booking-destination");
-  let bkgCabinCat = document.getElementById("booking-category");
-  let bkgPrice = document.getElementById("booking-price");
-  bkgDestination.innerHTML = newOpt;
-  bkgCabinCat.innerHTML = selectedCabin;
-  bkgPrice.innerHTML = cabinPrice;
 }
 // function removeNum(cat) {
 //   for (let num in tahitiCabins) {

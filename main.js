@@ -94,9 +94,11 @@ function myFunction() {
   }
 }
 let bkgForm = document.getElementById("booking-form");
+let mainForm = document.getElementById("form");
 bkgForm.style.display = "None";
 function bookingForm() {
   bkgForm.style.display = "Block";
+  mainForm.style.display = "None";
 }
 // function removeNum(cat) {
 //   for (let num in tahitiCabins) {

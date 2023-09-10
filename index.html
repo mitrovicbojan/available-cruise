@@ -183,9 +183,10 @@
         <h3>Destination: <span id="booking-destination"></span></h3>
         <h3>Category: <span id="booking-category"></span></h3>
         <h3>Price per person: <span id="booking-price"></span></h3>
-        <button type="button" class="btn btn-primary btn-sm mb-3">Single Traveler</button>
-        <button type="button" class="btn btn-secondary btn-sm mb-3">Two Travelers</button>
-        <h6>Primary Traveler</h6>
+        <button type="button" class="btn btn-primary btn-sm mb-3" id="sglTraveler" onclick="sglTraveler()">Single Traveler</button>
+        <button type="button" class="btn btn-secondary btn-sm mb-3"id="dblTraveler" onclick="dblTraveler()">Two Travelers</button>
+        <div class="inputs mb-3">
+          <h6>Primary Traveler</h6>
         <div class="form-floating mb-3">
           <input type="text" class="form-control" id="floatingInput" placeholder="First Name">
           <label for="floatingInput">First Name</label>
@@ -198,7 +199,9 @@
           <input type="phone" class="form-control" id="floatingPassword" placeholder="Phone Number">
           <label for="floatingPassword">Phone Number</label>
         </div>
-        <h6>Primary Traveler</h6>
+        </div>
+        <div class="inputs mb-3">
+          <h6>Secondary Traveler</h6>
         <div class="form-floating mb-3">
           <input type="text" class="form-control" id="floatingInput" placeholder="First Name">
           <label for="floatingInput">First Name</label>
@@ -210,7 +213,10 @@
         <div class="form-floating mb-3">
           <input type="phone" class="form-control" id="floatingPassword" placeholder="Phone Number">
           <label for="floatingPassword">Phone Number</label>
-        </div>       
+        </div>
+
+        </div>
+               
         <button
           class="btn btn-success btn-lg btn-block"
           type="button"

@@ -93,6 +93,7 @@ function myFunction() {
     }
   }
 }
+
 let bkgForm = document.getElementById("booking-form");
 let mainForm = document.getElementById("form");
 bkgForm.style.display = "None";
@@ -110,3 +111,9 @@ function bookingForm() {
 
 // tahitiCabins[1].number = removeNum("B");
 // console.log(tahitiCabins[1].number);
+function sgl() {
+  alert("hello");
+}
+function dbl() {
+  console.log("hello");
+}

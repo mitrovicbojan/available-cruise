@@ -134,3 +134,9 @@ function dbl() {
   paymentBtn.style.display = "Block";
   finalPrice.innerHTML = "Final Price: " + `${Number(bkgPrice.innerHTML) * 2}`;
 }
+let payForm = document.getElementById("payment-form");
+payForm.style.display = "None";
+
+function payment() {
+  payForm.style.display = "Block";
+}

@@ -97,6 +97,10 @@ function myFunction() {
 let bkgForm = document.getElementById("booking-form");
 let mainForm = document.getElementById("form");
 bkgForm.style.display = "None";
+
+let sglTraveler = document.getElementById("inputs-sgl");
+let dblTraveler = document.getElementById("inputs-dbl");
+dblTraveler.style.display = "None";
 function bookingForm() {
   bkgForm.style.display = "Block";
   mainForm.style.display = "None";
@@ -111,9 +115,8 @@ function bookingForm() {
 
 // tahitiCabins[1].number = removeNum("B");
 // console.log(tahitiCabins[1].number);
-function sgl() {
-  alert("hello");
-}
+let bkgPrice = document.getElementById("booking-price");
+function sgl() {}
 function dbl() {
-  console.log("hello");
+  dblTraveler.style.display = "Block";
 }

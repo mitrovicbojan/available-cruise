@@ -124,9 +124,13 @@ let finalPrice = document.getElementById("final-price");
 function sgl() {
   sglTraveler.style.display = "Block";
   paymentBtn.style.display = "Block";
-  finalPrice.innerHTML = "Price for Single Traveler: ";
+  dblTraveler.style.display = "None";
+  sngPrice = Number(bkgPrice.innerHTML) + Number(bkgPrice.innerHTML) * 0.6;
+  finalPrice.innerHTML = "Price for Single Traveler: " + `${sngPrice}`;
 }
 function dbl() {
+  sglTraveler.style.display = "Block";
   dblTraveler.style.display = "Block";
   paymentBtn.style.display = "Block";
+  finalPrice.innerHTML = "Final Price: " + `${Number(bkgPrice.innerHTML) * 2}`;
 }

@@ -182,7 +182,7 @@
       <form class="bg-light ml-3" id="booking-form">
         <h3>Destination: <span id="booking-destination"></span></h3>
         <h3>Category: <span id="booking-category"></span></h3>
-        <h3>Price per person: <span id="booking-price"></span></h3>
+        <h3 id="final-price">Price per person: <span id="booking-price"></span></h3>
         <button type="button" class="btn btn-primary btn-sm mb-3" id="sglTraveler" onclick="sgl()">Single Traveler</button>
         <button type="button" class="btn btn-secondary btn-sm mb-3" id="dblTraveler" onclick="dbl()">Two Travelers</button>
         <div class="inputs-sgl mb-3" id="inputs-sgl">
@@ -220,7 +220,7 @@
         <button
           class="btn btn-success btn-lg btn-block"
           type="button"
-          id="booking-btn"   
+          id="payment-btn"   
           onclick="payment()"       
         >
           Payment

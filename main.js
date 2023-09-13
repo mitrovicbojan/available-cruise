@@ -108,16 +108,6 @@ function bookingForm() {
   bkgForm.style.display = "Block";
   mainForm.style.display = "None";
 }
-// function removeNum(cat) {
-//   for (let num in tahitiCabins) {
-//     if (cat == tahitiCabins[num].category) {
-//       return tahitiCabins[num].number - 1;
-//     }
-//   }
-// }
-
-// tahitiCabins[1].number = removeNum("B");
-// console.log(tahitiCabins[1].number);
 
 let bkgPrice = document.getElementById("booking-price");
 let finalPrice = document.getElementById("final-price");
@@ -140,8 +130,8 @@ let payOutputPrice = document.getElementById("pay-price");
 function payment() {
   payForm.style.display = "Block";
   bkgForm.style.display = "None";
-  console.log(finalPrice.innerText);
+
   let payPrice = finalPrice.innerText;
-  console.log(payPrice);
+
   payOutputPrice.innerHTML = payPrice;
 }

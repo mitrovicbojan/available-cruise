@@ -223,18 +223,18 @@
           id="payment-btn"   
           onclick="payment()"       
         >
-          Payment
+          Continue to checkout
         </button>
       </form>
       <form class="bg-light ml-3" id="payment-form">
         <div class="row mb-4">
-          <div class="col">
+          <div class="col-md-12">
             <div class="form-outline">
               <input type="text" id="formNameOnCard" class="form-control" />
               <label class="form-label" for="formNameOnCard">Name on card</label>
             </div>
           </div>
-          <div class="col">
+          <div class="col-md-12">
             <div class="form-outline">
               <input type="text" id="formCardNumber" class="form-control" />
               <label class="form-label" for="formCardNumber">Credit card number</label>
@@ -242,15 +242,15 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-8 mb-4">
-            <div class="row mb-4">
-              <div class="col-3">
+          <div class="row mb-4">
+            <div class="row md-4">
+              <div class="col-6">
                 <div class="form-outline">
                   <input type="text" id="formExpiration" class="form-control" />
                   <label class="form-label" for="formExpiration">Expiration</label>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-4">
                 <div class="form-outline">
                   <input type="text" id="formCVV" class="form-control" />
                   <label class="form-label" for="formCVV">CVV</label>
@@ -259,8 +259,8 @@
             </div>
          </div>
         </div>   
-        <button class="btn btn-primary btn-lg btn-block" type="submit">
-          Continue to checkout
+        <button class="btn btn-primary btn-lg btn-block" type="button">
+          Confirm
         </button>
       </form>
     </main>

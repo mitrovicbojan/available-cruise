@@ -136,7 +136,12 @@ function dbl() {
 }
 let payForm = document.getElementById("payment-form");
 payForm.style.display = "None";
-
+let payOutputPrice = document.getElementById("pay-price");
 function payment() {
   payForm.style.display = "Block";
+  bkgForm.style.display = "None";
+  console.log(finalPrice.innerText);
+  let payPrice = finalPrice.innerText;
+  console.log(payPrice);
+  payOutputPrice.innerHTML = payPrice;
 }

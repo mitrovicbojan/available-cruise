@@ -135,3 +135,13 @@ function payment() {
 
   payOutputPrice.innerHTML = payPrice;
 }
+
+// PDF
+
+function downloadPDF() {
+  let firstName = document.getElementById("floatingFirstName").value;
+  console.log(firstName);
+  let doc = new jsPDF();
+  doc.text(20, 20, "First Name: " + firstName);
+  doc.save("invoice.pdf");
+}

@@ -8,6 +8,7 @@
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -129,18 +130,7 @@
             <a class="nav-link disabled" href="#">Disabled</a>
           </li>
         </ul>
-        <!-- <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form> -->
-      </div>
+        </div>
     </nav>
     <main>
       <form class="bg-light ml-3" id="form">
@@ -190,15 +180,15 @@
         <div class="inputs-sgl mb-3" id="inputs-sgl">
           <h6>Primary Traveler</h6>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="First Name">
+          <input type="text" class="form-control" id="floatingFirstName" placeholder="First Name">
           <label for="floatingInput">First Name</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingPassword" placeholder="Last Name">
+          <input type="text" class="form-control" id="floatingLastName" placeholder="Last Name">
           <label for="floatingPassword">Last Name</label>
         </div>
         <div class="form-floating">
-          <input type="phone" class="form-control" id="floatingPassword" placeholder="Phone Number">
+          <input type="phone" class="form-control" id="floatingPhoneNumber" placeholder="Phone Number">
           <label for="floatingPassword">Phone Number</label>
         </div>
         </div>
@@ -326,7 +316,7 @@
               </div>
               <div class="modal-footer">
                 <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                <button type="button" class="btn btn-primary">Download Invoice</button>
+                <button type="button" class="btn btn-primary" onclick="downloadPDF()">Download Invoice</button>
               </div>
             </div>
           </div>
@@ -336,5 +326,13 @@
     </main>
     <!-- <script src="app.js"></script> -->
     <script src="main.js"></script>
+    <script>
+      $("#formCardNumber").on("keypress change", function () {
+      $(this).val(function (index, value) {
+        return value.replace(/\W/gi, "").replace(/(.{4})/g, "$1 ");
+      });
+    });
+    </script>
+    
   </body>
 </html>

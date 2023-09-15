@@ -8,3 +8,11 @@ main {
   display: flex;
   flex-wrap: wrap;
 }
+#titleLanding {
+  position: absolute;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  left: 70%;
+}

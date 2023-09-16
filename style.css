@@ -9,10 +9,18 @@ main {
   flex-wrap: wrap;
 }
 #titleLanding {
-  position: absolute;
-  color: #ffffff;
+  color: #e43333;
   display: flex;
   justify-content: center;
-  top: 50%;
-  left: 70%;
+  position: absolute;
+  top: 620px;
+  left: 20%;
+}
+#hero {
+  width: 100%;
+  background-image: url("./7852702_1932.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vw;
 }

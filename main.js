@@ -140,8 +140,34 @@ function payment() {
 
 function downloadPDF() {
   let firstName = document.getElementById("floatingFirstName").value;
+  let lastName = document.getElementById("floatingLastName").value;
+  let phoneNumber = document.getElementById("floatingPhoneNumber").value;
+  let firstNameDbl = document.getElementById("floatingFirstNameDbl").value;
+  let lastnameDbl = document.getElementById("floatingLastNameDbl").value;
+  let phoneNumberDbl = document.getElementById("floatingPhoneNumberDbl").value;
 
-  let doc = new jsPDF();
-  doc.text(20, 20, "First Name: " + firstName);
-  doc.save("invoice.pdf");
+  if (firstNameDbl == "") {
+    let doc = new jsPDF();
+    doc.text(100, 20, "Invoice");
+    doc.text(20, 30, "First Name: " + firstName);
+    doc.text(20, 40, "Last Name: " + lastName);
+    doc.text(20, 50, "Phone Number: " + phoneNumber);
+
+    doc.text(20, 70, "Paid in Full.");
+    doc.save("invoice.pdf");
+  } else {
+    let doc = new jsPDF();
+    doc.text(100, 20, "Invoice");
+    doc.text(20, 30, "Primary Passenger");
+    doc.text(20, 40, "First Name: " + firstName);
+    doc.text(20, 50, "Last Name: " + lastName);
+    doc.text(20, 60, "Phone Number: " + phoneNumber);
+    doc.text(20, 70, "Secondary Passenger");
+    doc.text(20, 80, "First Name: " + firstNameDbl);
+    doc.text(20, 90, "Last Name: " + lastnameDbl);
+    doc.text(20, 100, "Phone Number: " + phoneNumberDbl);
+
+    doc.text(20, 120, "Paid in Full.");
+    doc.save("invoice.pdf");
+  }
 }

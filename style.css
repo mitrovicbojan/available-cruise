@@ -16,11 +16,16 @@ main {
   top: 620px;
   left: 20%;
 }
-#hero {
-  width: 100%;
-  background-image: url("./7852702_1932.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 50vw;
+
+.btn-rounded {
+  position: relative;
+  padding: 0.9375rem 4.375rem 0.937rem 1.25rem;
+  font-weight: 500;
+  margin: 0;
+  border: 0.1rem solid rgba(#ffffff, 0.6);
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+.display-2 {
+  color: black;
 }
